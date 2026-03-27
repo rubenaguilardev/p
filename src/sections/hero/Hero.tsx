@@ -35,9 +35,10 @@ const Hero = () => {
                 Hi, I'm <span className="text-white">Ruben Aguilar</span> - a <span className="text-primary">software developer</span> sit amet consectetur adipisicing elit. Repellat earum hic enim eos fugiat omnis. Officia.
               </p>
             </div>
-            <div className='flex gap-4'>
+            <div className='flex items-center gap-4'>
+              <span></span>
               {socialLinks.map(({icon: Icon, href}) => (
-                <div key={href} className='px-3 py-2.5 glass rounded-lg cursor-pointer hover:bg-surface/15'>
+                <div key={href} className='px-3 py-2.5 glass rounded-lg cursor-pointer hover:bg-surface/15 animate-fade-in animation-delay-300'>
                   {<Icon className='h-7 w-7 transition-transform duration-300 hover:scale-115' />}
                 </div>
               ))}
