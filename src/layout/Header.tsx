@@ -15,7 +15,7 @@ const Header = () => {
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   return (
-    <header className="fixed top-0 left-0 right-0 bg-transparent py-5">
+    <header className="fixed top-0 left-0 right-0 bg-transparent py-5 z-50">
       <nav className='container flex justify-between items-center mx-auto px-6'>
         <a href='#' className='flex items-center gap-1 text-xl font-bold tracking-tight hover:text-primary'>
           <FaCode className='text-primary'/> Ben
@@ -23,7 +23,7 @@ const Header = () => {
         <div className='hidden md:flex items-center gap-1'>
           <div className='glass rounded-full px-2 py-1 flex items-center gap-1'>
             {navLinks.map(({href, label}) => (
-              <a key={href} href={href} className='px-4 py-2 text-sm rounded-full text-muted-foreground hover:text-foreground hover:bg-surface/15'>
+              <a key={href} href={href} className='px-4 py-2 text-sm rounded-full text-muted-foreground hover:text-foreground hover:bg-surface/15 transition-all duration-300'>
                 {label}
               </a>
             ))}

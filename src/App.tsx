@@ -14,13 +14,13 @@ const App = () => {
       <Bokeh />
       <Header />
       <main>
-        {/* <Hero />
+        <Hero />
         <About />
         <Skills />
         <Projects />
         <Education />
         <Experience />
-        <Contact /> */}
+        <Contact /> 
       </main>
     </div>
   )

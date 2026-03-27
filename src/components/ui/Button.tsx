@@ -1,7 +1,7 @@
 type Nav = {
   className: string
   size: 'sm' | 'default' | 'lg'
-  children: string
+  children: string | React.ReactNode
 }
 
 const Button = ({ className, size, children }:Nav ) => {
