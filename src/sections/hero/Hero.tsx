@@ -2,6 +2,7 @@ import AnimatedBorderButton from '@/components/ui/AnimatedBorderButton'
 import Button from '@/components/ui/Button'
 import { FaLongArrowAltRight, FaGithub, FaLinkedin } from "react-icons/fa"
 import { FaBluesky } from "react-icons/fa6";
+import Card from './Card';
 
 const socialLinks = [
   { icon: FaGithub, href: '#' },
@@ -14,7 +15,7 @@ const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
       <div className="container mx-auto px-6 pt-32 pb-20 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
             <div className="">
               <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-sm text-primary animate-fade-in">
@@ -46,6 +47,7 @@ const Hero = () => {
               <AnimatedBorderButton>View Projects</AnimatedBorderButton>
             </div>
           </div>
+          <Card />
         </div>
       </div>
     </section>
