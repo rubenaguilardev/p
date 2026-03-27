@@ -1,6 +1,10 @@
-const App = () => {
+import Bokeh from "@/components/ui/bokeh"
+
+const App = () => {  
   return (
-    <h1 className="text-5xl">Portfolio</h1>
+    <div className="relative w-full h-screen overflow-hidden">
+      <Bokeh />
+    </div>
   )
 }
 
