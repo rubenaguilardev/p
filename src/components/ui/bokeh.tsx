@@ -29,11 +29,11 @@ interface Orb {
 }
 
 const DEFAULT_COLORS = [
-  "rgba(255, 200, 120, 0.3)",
-  "rgba(255, 180, 100, 0.25)",
-  "rgba(255, 220, 150, 0.2)",
-  "rgba(255, 160, 80, 0.25)",
-  "rgba(255, 240, 200, 0.2)",
+  "rgba(65, 105, 225, 0.3)",
+  "rgba(65, 105, 225, 0.25)",
+  "rgba(65, 105, 225, 0.2)",
+  "rgba(65, 105, 225, 0.25)",
+  "rgba(65, 105, 225, 0.2)",
 ]
 
 export function BokehBackground({
@@ -156,7 +156,7 @@ export function BokehBackground({
       ref={containerRef}
       className={cn("fixed inset-0 overflow-hidden", className)}
       style={{
-        background: "linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f0f1a 100%)",
+        background: "linear-gradient(135deg, #000 0%, #000 50%, #000 100%)",
       }}
     >
       <canvas ref={canvasRef} className="absolute inset-0 h-full w-full" />

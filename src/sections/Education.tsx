@@ -1,6 +1,6 @@
 const Education = () => {
   return (
-    <h2 className="relative">hi</h2>
+    <h2 className="relative">education</h2>
   )
 }
 

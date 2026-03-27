@@ -1,6 +1,6 @@
 const Experience = () => {
   return (
-    <h2 className="relative">hi</h2>
+    <h2 className="relative">experience</h2>
   )
 }
 
