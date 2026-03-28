@@ -1,7 +1,7 @@
 import { FaCode, FaBars } from 'react-icons/fa'
 import { IoMdClose, IoMdMenu} from 'react-icons/io'
 import Button from '@/components/ui/Button'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 const navLinks = [
   { href: '#about', label: 'About' },
@@ -14,9 +14,21 @@ const navLinks = [
 const Header = () => {
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isScrolled, setIsScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50)
+    }
+
+    window.addEventListener('scroll', handleScroll)
+
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
   return (
-    <header className="fixed top-0 left-0 right-0 bg-transparent py-5 z-50">
-      <nav className='container flex justify-between items-center mx-auto px-6'>
+    <header className={`fixed top-0 left-0 right-0 transition-all duration-500 ${isScrolled ? 'glass-strong py-3' : 'bg-transparent py-5'} border-none outline-none z-50`}>
+      <nav className='max-w-7xl flex justify-between items-center mx-auto px-6 lg:px-10'>
         <a href='#' className='flex items-center gap-1 text-xl font-bold tracking-tight hover:text-primary'>
           <FaCode className='text-primary'/> Ben
         </a>

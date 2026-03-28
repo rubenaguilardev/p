@@ -1,12 +1,12 @@
 import AnimatedBorderButton from '@/components/ui/AnimatedBorderButton'
 import Button from '@/components/ui/Button'
-import { FaLongArrowAltRight, FaGithub, FaLinkedin } from "react-icons/fa"
+import { FaLongArrowAltRight, FaGithub, FaLinkedin, FaChevronDown } from "react-icons/fa"
 import { FaBluesky } from "react-icons/fa6";
 import Card from './Card';
 
 const socialLinks = [
-  { icon: FaGithub, href: '#' },
-  { icon: FaLinkedin, href: '#' },
+  { icon: FaGithub, href: 'https://github.com/rubenaguilardev' },
+  { icon: FaLinkedin, href: 'https://www.linkedin.com/in/rubenaguilar-/' },
   { icon: FaBluesky, href: '#' }
 ]
 
@@ -14,7 +14,7 @@ const socialLinks = [
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
-      <div className="container mx-auto px-6 pt-32 pb-20 relative z-10">
+      <div className="max-w-7xl mx-auto px-6 lg:px-10 pt-32 pb-20 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
             <div className="">
@@ -37,19 +37,30 @@ const Hero = () => {
             </div>
             <div className='flex items-center gap-4'>
               <span></span>
-              {socialLinks.map(({icon: Icon, href}) => (
-                <div key={href} className='px-3 py-2.5 glass rounded-lg cursor-pointer hover:bg-surface/15 animate-fade-in animation-delay-300'>
+              {socialLinks.map(({icon: Icon, href}, index) => (
+                <a 
+                  key={index} 
+                  href={href} 
+                  target='_blank'
+                  rel='nonopener'
+                  className='px-3 py-2.5 glass rounded-lg cursor-pointer hover:bg-surface/20 animate-fade-in animation-delay-300'>
                   {<Icon className='h-7 w-7 transition-transform duration-300 hover:scale-115' />}
-                </div>
+                </a>
               ))}
             </div>
-            <div className='flex flex-wrap gap-4 animate-fade-in animation-delay-400'>
+            <div className='flex flex-wrap gap-4 animate-fade-in animation-delay-500'>
               <Button className='' size='lg'>Contact me <FaLongArrowAltRight className='w-5 h-5' /></Button>
               <AnimatedBorderButton>View Projects</AnimatedBorderButton>
             </div>
           </div>
           <Card />
         </div>
+      </div>
+      <div className='absolute bottom-8 left-1/2 -translate-x-1/2 animate-fade-in animation-delay-800'>
+        <a href="#about" className='flex flex-col items-center gap-2 text-muted-foreground'>
+          <span className='text-xs uppercase tracking-wider'>Scroll</span>
+          <FaChevronDown className='w-6 h-6 animate-bounce' />
+        </a>    
       </div>
     </section>
   )

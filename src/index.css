@@ -48,6 +48,11 @@
     text-shadow: 0 0 30px
       color-mix(in srgb, var(--color-primary) 50%, transparent);
   }
+  .glow-border {
+    box-shadow: 0 0 20px
+      color-mix(in srgb, var(--color-primary) 20%, transparent),
+    inset 0 0 20px color-mix(insrgb, var(--color-primary) 5%, transparent);
+  }
 }
 
 @layer utilities {
@@ -78,8 +83,21 @@
     }
   }
 
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
   .animate-fade-in {
     animation: fade-in 0.7s ease-out both;
+  }
+  .animate-float {
+    animation: float 4s ease-in-out infinite;
   }
   .animate-fade-in-left {
     animation: fade-in-left 0.7s ease-out both;
