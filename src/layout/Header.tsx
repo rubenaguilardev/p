@@ -53,7 +53,12 @@ const Header = () => {
         <div className='md:hidden glass-strong animate-fade-in'>
           <div className='container mx-auto p-6 flex flex-col gap-4'>
             {navLinks.map(({href, label}) => (
-              <a key={href} href={href} className='text-lg text-muted-foreground hover:text-foreground py-2'>
+              <a 
+                key={href} 
+                href={href} 
+                onClick={() => setIsMobileMenuOpen(false)}
+                className='text-lg text-muted-foreground hover:text-foreground py-2'
+              >
                 {label}
               </a>
             ))}
