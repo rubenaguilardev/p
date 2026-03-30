@@ -28,7 +28,7 @@ const Header = () => {
 
   return (
     <header className={`fixed top-0 left-0 right-0 transition-all duration-500 ${isScrolled ? 'glass-strong py-3' : 'bg-transparent py-5'} border-none outline-none z-50`}>
-      <nav className='max-w-7xl flex justify-between items-center mx-auto px-6 lg:px-10'>
+      <nav className='container flex justify-between items-center mx-auto px-6'>
         <a href='#' className='flex items-center gap-1 text-xl font-bold tracking-tight hover:text-primary'>
           <FaCode className='text-primary'/> Ben
         </a>

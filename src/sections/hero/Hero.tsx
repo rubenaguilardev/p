@@ -14,7 +14,7 @@ const socialLinks = [
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6 lg:px-10 pt-32 pb-20 relative z-10">
+      <div className="container mx-auto px-6 pt-32 pb-20 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
             <div className="">
@@ -31,7 +31,7 @@ const Hero = () => {
                   consectet
                 </span>
               </h1>
-              <p className="text-lg font-medium text-muted-foreground max-w-lg animate-fade-in animation-delay-200">
+              <p className="text-lg font-medium text-muted-foreground max-w-lg lg:max-w-xl animate-fade-in animation-delay-200">
                 Hi, I'm <span className="text-white">Ruben Aguilar</span> - a <span className="text-primary">software developer</span> sit amet consectetur adipisicing elit. Repellat earum hic enim eos fugiat omnis. Officia.
               </p>
             </div>
