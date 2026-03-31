@@ -46,6 +46,19 @@ const Projects = () => {
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique tempore illum, quibusdam excepturi perspiciatis, quas quasi error natus! 
           </p>
         </div>
+        <div className="grid md:grid-cols-2 gap-8">
+          {projects.map((project, index) =>(
+            <div key={index} className="group glass rounded-2xl overflow-hidden animate-fade-in md:row-span-1">
+              <div className="relative overflow-hidden aspect-video">
+                <img 
+                  src={project.image} 
+                  alt={project.title} 
+                  className="w-full h-full object-cover transition-trasnform duration-700"
+                />
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   )
