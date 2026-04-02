@@ -59,7 +59,7 @@ const Contact = () => {
               </div>
             </form>
           </div> 
-          <div className="flex flex-col justify-center items-center glass gap-6 px-5 rounded">
+          <div className="flex md:flex-col justify-center items-center glass gap-6 py-4 md:py-0 px-5 rounded">
             {contactlLinks.map(({icon: Icon, color })=> (
               <a href="">
                 {Icon === gmail ? <img src={Icon} className="w-8 h-8" /> : 
