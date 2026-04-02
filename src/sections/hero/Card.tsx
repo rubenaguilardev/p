@@ -23,7 +23,7 @@ const Card = () => {
           <span className='text-xs text-muted-foreground tracking-wide'>Portfolio.tsx</span>
         </div>
       </div>
-      <div className='py-10 w-full flex flex-col justify-center bg-black/50 glass border-t-0 rounded-b-[20px] animate-fade-in-left animation-delay-400'>
+      <div className='py-10 w-full flex flex-col justify-center bg-black/40 glass border-t-0 rounded-b-[20px] animate-fade-in-left animation-delay-400'>
         {info.map(({num, label, text, numStyles, labelStyles, textStyles}) => (
           <div key={label} className={`flex px-10 tracking-wide ${num === '07' ? 'gap-0 mt-4' : 'gap-3'}`}>
             <span className={`${numStyles} text-muted-foreground/80 space-grotesk font-light`}>{num}</span>
