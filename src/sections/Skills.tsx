@@ -27,9 +27,9 @@ const Skills = () => {
   return (
     <section className='relative overflow-hidden py-32'>
       <div className='flex justify-center items-center gap-4'>
-        <TypeScript className='w-15'/>
-        <React className='w-20'/>
-        <TailwindCSS className='w-15'/>
+        <TypeScript className='w-15 animate-float-long'/>
+        <React className='w-20 animate-float-reverse-long' />
+        <TailwindCSS className='w-15 animate-float-long'/>
         <Nextjs className='w-20'/>
         <Figma className='h-15 w-15'/>
         <Node className='h-18' />
