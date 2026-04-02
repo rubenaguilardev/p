@@ -1,4 +1,4 @@
-import { FaCode, FaBars } from 'react-icons/fa'
+import { FaCode } from 'react-icons/fa'
 import { IoMdClose, IoMdMenu} from 'react-icons/io'
 import Button from '@/components/ui/Button'
 import { useState, useEffect } from 'react'
