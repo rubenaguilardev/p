@@ -47,7 +47,7 @@ const Experience = () => {
                     <p className="text-sm text-muted-foreground mt-4">{exp.description}</p>
                     <div className={`flex flex-wrap gap-2 mt-4 ${index % 2 === 0 ? 'md:justify-end' : ''}`}>
                       {exp.technologies.map((tech, techIndex) => (
-                        <span className="px-3 py-1.5 bg-surface/15 text-sm rounded-full text-muted-foreground">{tech}</span>
+                        <span key={techIndex} className="px-3 py-1.5 bg-surface/15 text-sm rounded-full text-muted-foreground">{tech}</span>
                       ))}
                     </div>
                   </div>
