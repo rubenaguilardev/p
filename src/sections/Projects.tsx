@@ -1,3 +1,4 @@
+import AnimatedBorderButton from "@/components/ui/AnimatedBorderButton"
 import { FiArrowUpRight, FiGithub } from "react-icons/fi"
 
 const projects = [
@@ -70,15 +71,23 @@ const Projects = () => {
                   <h3 className="text-xl font-semibold group-hover:text-primary transition-colors">{project.title}</h3>
                   <FiArrowUpRight className="w-5 h-5 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 group-hover:-translate-y-1 transition-all"/>
                 </div>
-                <p>{project.description}</p>
-                <div>
+                <p className="text-muted-foreground text-sm">{project.description}</p>
+                <div className="flex flex-wrap gap-2">
                   {project.tags.map((tag, tagIndex) => (
-                    <span>{tag}</span>
+                    <span key={tagIndex} className="px-4 py-1.5 rounded-full bg-surface/15 text-xs font-medium border border-border/50 text-muted-foreground hover:border-primary/50 hover:text-primary transition-all duration-300">
+                      {tag}
+                    </span>
                   ))}
                 </div>
               </div>
             </div>
           ))}
+        </div>
+        <div className="text-center mt-12 animate-fade-in animation-delay-500">
+          <AnimatedBorderButton>
+            View all projects
+            <FiArrowUpRight />
+          </AnimatedBorderButton>
         </div>
       </div>
     </section>

@@ -1,5 +1,5 @@
 type AnimatedBtn = {
-  children: string
+  children: string | React.ReactNode
 }
 
 const AnimatedBorderButton = ({children}:AnimatedBtn) => {
