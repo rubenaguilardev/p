@@ -1,6 +1,7 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa"
 import { FaBluesky } from "react-icons/fa6"
 import gmail from "@/assets/gmail.svg"
+import Button from "@/components/ui/Button"
 
 const contactlLinks = [
   { icon: gmail, href: '#', color: ' ' },
@@ -44,7 +45,7 @@ const Contact = () => {
                   id="email" 
                   type="email" 
                   required
-                  placeholder="Your email..." 
+                  placeholder="your@email.com" 
                   className="w-full px-4 py-3 rounded-xl border border-border/70 bg-black/40 focus:border-primary focus:ring-0.5 focus:ring-primary-foreground focus:bg-primary/10 outline-none transition-all"
                 />
               </div>
@@ -52,11 +53,13 @@ const Contact = () => {
                 <label htmlFor="message" className="block text-sm font-medium mb-2">Message</label>
                 <textarea 
                   id="message" 
+                  rows={5}
                   required
                   placeholder="Your message..." 
                   className="w-full px-4 py-3 rounded-xl border border-border/70 bg-black/40 focus:border-primary focus:ring-0.5 focus:ring-primary-foreground focus:bg-primary/10 outline-none transition-all resize-none"
                 />
               </div>
+              <Button className='w-full' size='lg' type='submit'>Send Message</Button>
             </form>
           </div> 
           <div className="flex md:flex-col justify-center items-center glass gap-6 py-4 md:py-0 px-5 rounded">

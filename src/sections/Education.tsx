@@ -9,7 +9,7 @@ const degrees = [
     university: 'Western Governors University',
     degree: 'Computer Science',
     specialization: 'Specilization in Computer Systems',
-    keyCourses: ['Computer Architecture and Systems', 'Software Architecture and Design', 'Applied Algorithms and Reasoning', 'AI and Machine Learning Foundations', 'Network Architecure and Cloud Computing'],
+    keyCourses: ['Computer Architecture', 'Software Architecture', 'Applied Algorithms', 'AI and Machine Learning Foundations', 'Network Architecure', 'Cloud Computing'],
     icon: SiBookstack
   },
   {

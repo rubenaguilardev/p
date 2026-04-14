@@ -13,7 +13,7 @@ const experiences = [
     company: 'Self-Employed',
     description: 'Delivered custom web solutions for small businesses and professionals, handling everything from design to deployment.',
     technologies: ['React', 'Typescript', 'TailwindCSS', 'Figma', '...'],
-    current: false
+    current: true
   }
 ]
 
